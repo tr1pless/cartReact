@@ -1,25 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import data from "./catalog.json";
+import { MyItem } from "./Components/Cart/Cart";
+import { addToCart, incrementSummary } from "./Components/store/cartSlice";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 export const App = (props) => {
-  const [cart, setCart] = useState([]);
-  const [summary, setSummary] = useState(0);
+  const cart = useSelector((state) => state.cart);
+  const summary = useSelector((state) => state.summary);
+  const dispatch = useDispatch();
 
   const handleBuy = (e) => {
     const result = products.find((item) => item.id == e.target.id);
-    const cartRes = cart.find((item) => item.id == e.target.id);
-    if (cartRes) {
-      ++cartRes.quantity;
-    } else {
-      cart.push({
-        id: result.id,
+    dispatch(
+      addToCart({
         title: result.title,
+        id: result.id,
         price: result.price,
-        quantity: +1,
-      });
-    }
-    console.log(cart, summary);
+        quantity: 1,
+      })
+    );
+    dispatch(incrementSummary(result.price));
   };
 
   const products = data.products;
@@ -28,21 +30,11 @@ export const App = (props) => {
     <>
       <div>
         <div className="cart">
-          {cart.map((cartItem) => {
-            setSummary(summary + cartItem.price * cartItem.quantity);
-            return (
-              <>
-                <div>IMG</div>
-                <p>{cartItem.title}</p>
-                <p>Price: {cartItem.price}</p>
-                <p>Quantity: {cartItem.quantity}</p>
-                <p>Total Sum: {cartItem.price * cartItem.quantity}</p>
-              </>
-            );
-          })}
-          <div>Total : {summary > 0 ? summary : "0"}</div>
+          <MyItem />
+
+          <div>Total SUMMARY: {summary > 0 ? summary : "0"}</div>
         </div>
-        <button onClick={() => cartHandler()}>cart</button>
+        {/* <button onClick={() => cartHandler()}>cart</button> */}
       </div>
       <div>
         {products.map((product) => {
