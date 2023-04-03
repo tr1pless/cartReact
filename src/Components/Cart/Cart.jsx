@@ -7,8 +7,8 @@ export const MyItem = () => {
 
   return (
     <>
-      <div className="cart__left">
-        <div>
+      <div className="cartWrapper">
+        <div className="cart">
           <h3>Shopping Cart</h3>
           {cart?.map((item) => (
             <CartItem

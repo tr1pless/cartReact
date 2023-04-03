@@ -1,0 +1,24 @@
+p{
+    margin: 0 auto;
+}
+.cartWrapper{
+
+}
+
+.cart{
+
+}
+
+.cartItem__incrDec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cartItem{
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.cartItem__title{
+}
