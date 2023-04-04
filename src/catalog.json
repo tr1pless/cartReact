@@ -1,18 +1,84 @@
 {
   "products": [
-    { "id": 1, "title": "perfume Oil", "price": 13 },
-    { "id": 2, "title": "Brown Perfume", "price": 40 },
-    { "id": 3, "title": "Fog Scent Xpressio Perfume", "price": 13 },
+    {
+      "id": 1,
+      "title": "Nike React Infinity Run Flyknit",
+      "price": 160,
+      "category": "RUNNING",
+      "gender": "MEN",
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-665455a5-45de-40fb-945f-c1852b82400d/react-infinity-run-flyknit-mens-running-shoe-zX42Nc.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Nike React Miler",
+      "price": 130,
+      "category": "RUNNING",
+      "gender": "MEN",
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-5cc7de3b-2afc-49c2-a1e4-0508997d09e6/react-miler-mens-running-shoe-DgF6nr.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Nike Joyride Run Flyknit",
+      "price": 180,
+      "gender": "WOMEN",
+      "category": "RUNNING",
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/99a7d3cb-e40c-4474-91c2-0f2e6d231fd2/joyride-run-flyknit-womens-running-shoe-HcfnJd.jpg"
+    },
     {
       "id": 4,
-      "title": "Non-Alcoholic Concentrated Perfume Oil",
-      "price": 120
+      "title": "Nike Mercurial Vapor 13 Elite FG",
+      "gender": "WOMEN",
+      "price": 250,
+      "category": "FOOTBALL",
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/9dda6202-e2ff-4711-9a09-0fcb7d90c164/mercurial-vapor-13-elite-fg-firm-ground-soccer-cleat-14MsF2.jpg"
     },
-    { "id": 5, "title": "Eau De Perfume Spray", "price": 30 },
-    { "id": 6, "title": "Hyaluronic Acid Serum", "price": 19 },
-    { "id": 7, "title": "Tree Oil 30ml", "price": 12 },
-    { "id": 8, "title": "Oil Free Moisturizer 100ml", "price": 40 },
-    { "id": 9, "title": "Skin Beauty Serum.", "price": 46 },
-    { "id": 10, "title": "Freckle Treatment Cream- 15gm", "price": 70 }
+    {
+      "id": 5,
+      "title": "Nike Phantom Vision Elite Dynamic Fit FG",
+      "price": 150,
+      "gender": "WOMEN",
+      "category": "FOOTBALL",
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/s1amp7uosrn0nqpsxeue/phantom-vision-elite-dynamic-fit-fg-firm-ground-soccer-cleat-19Kv1V.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Nike Phantom Venom Academy FG",
+      "price": 80,
+      "gender": "WOMEN",
+      "category": "FOOTBALL",
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/whegph8z9ornhxklc8rp/phantom-venom-academy-fg-firm-ground-soccer-cleat-6JVNll.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Nike Mercurial Vapor 13 Elite Tech Craft FG",
+      "price": 145,
+      "gender": "MEN",
+      "category": "FOOTBALL",
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/vhbwnkor8sxt8qtecgia/mercurial-vapor-13-elite-tech-craft-fg-firm-ground-soccer-cleat-l38JPj.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Nike Air Force 1",
+      "gender": "KIDS",
+      "category": "CASUAL",
+      "price": 90,
+      "imageURL": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/178b2a46-3ee4-492b-882e-f71efdd53a36/air-force-1-big-kids-shoe-2zqp8D.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Nike Renew Run",
+      "gender": "KIDS",
+      "category": "RUNNING",
+      "price": 80,
+      "imageURL": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-73e54c0b-11a6-478b-9f90-bd97fcde872d/renew-run-big-kids-running-shoe-5Bpz93.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Nike Joyride Dual Run",
+      "gender": "KIDS",
+      "category": "RUNNING",
+      "price": 110,
+      "imageURL": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/33888130-0320-41a1-ba53-a026decd8aa2/joyride-dual-run-big-kids-running-shoe-1HDJF8.jpg"
+    }
   ]
 }

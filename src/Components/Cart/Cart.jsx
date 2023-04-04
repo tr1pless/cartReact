@@ -12,6 +12,7 @@ export const MyItem = () => {
           <h3>Shopping Cart</h3>
           {cart?.map((item) => (
             <CartItem
+              image={item.image}
               key={item.id}
               id={item.id}
               title={item.title}
