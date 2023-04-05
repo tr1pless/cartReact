@@ -5,9 +5,22 @@ const cartSlice = createSlice({
   initialState: {
     cart: [],
     summary: 0,
-    filter: [],
+    filtered: [],
+    filterDone: false,
   },
   reducers: {
+    clearFilter: (state, action) => {
+      state.filtered = state.cart;
+      state.filterDone = false;
+      console.log("cleared?", state.filtered);
+    },
+    filterArray: (state, action) => {
+      if (filterDone === true) {
+        state.filtered.filter(item); // закончил тут. нужно решить как сделать проверку для того сделан ли фильтр по категории или полу.
+      }
+      state.filtered = action.payload;
+      state.filterDone = true;
+    },
     addToCart: (state, action) => {
       const itemInCart = state.cart.find(
         (item) => item.id === action.payload.id
@@ -64,4 +77,6 @@ export const {
   removeItem,
   incrementSummary,
   decrementSummary,
+  filterArray,
+  clearFilter,
 } = cartSlice.actions;
