@@ -9,7 +9,6 @@ export const MyItem = () => {
     <>
       <div className="cartWrapper">
         <div className="cart">
-          <h3>Shopping Cart</h3>
           {cart?.map((item) => (
             <CartItem
               image={item.image}
