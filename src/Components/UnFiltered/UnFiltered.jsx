@@ -1,8 +1,29 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addToCart, incrementSummary, setHide } from "../store/cartSlice";
 import data from "./../../catalog.json";
 
 export const UnFiltered = () => {
+  const dispatch = useDispatch();
   const products = data.products;
+  const handleBuy = (e) => {
+    console.log(e.target.id);
+    const result = data.products.find((item) => item.id == e.target.id);
+    dispatch(setHide(false));
+    dispatch(
+      addToCart({
+        brand: result.brand,
+        items_left: result.items_left,
+        title: result.title,
+        id: result.id,
+        price: result.price,
+        quantity: 1,
+        image: result.imageURL,
+      })
+    );
+    dispatch(incrementSummary(result.price));
+  };
+
   return products.map((product) => {
     return (
       <div

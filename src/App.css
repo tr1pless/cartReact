@@ -69,7 +69,7 @@
   grid-template-columns: 330px 330px 330px;
   grid-template-rows: 350px 350px 350px 350px;
   gap: 91px 20px;
-  margin: 50px 50px;
+  margin: 150px 50px 0 50px;
   width: 100%;
   max-width: 1200px;
   justify-content: space-between;

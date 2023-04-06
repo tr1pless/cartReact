@@ -1,10 +1,32 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { addToCart, incrementSummary, setHide } from "../store/cartSlice";
+import data from "./../../catalog.json";
 
 export const Filtered = () => {
+  const dispatch = useDispatch();
   const filter = useSelector((state) => state.filtered);
 
   return filter.map((product) => {
+    const handleBuy = (e) => {
+      console.log(e.target.id);
+      const result = data.products.find((item) => item.id == e.target.id);
+      dispatch(setHide(false));
+      dispatch(
+        addToCart({
+          brand: result.brand,
+          items_left: result.items_left,
+          title: result.title,
+          id: result.id,
+          price: result.price,
+          quantity: 1,
+          image: result.imageURL,
+        })
+      );
+      dispatch(incrementSummary(result.price));
+    };
+
     return (
       <div
         key={product.id}

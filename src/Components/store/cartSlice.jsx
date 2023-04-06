@@ -7,17 +7,18 @@ const cartSlice = createSlice({
     summary: 0,
     filtered: [],
     filterDone: false,
+    hide: true,
   },
   reducers: {
+    setHide: (state, action) => {
+      state.hide = action.payload;
+    },
     clearFilter: (state, action) => {
       state.filtered = state.cart;
       state.filterDone = false;
       console.log("cleared?", state.filtered);
     },
     filterArray: (state, action) => {
-      if (filterDone === true) {
-        state.filtered.filter(item); // закончил тут. нужно решить как сделать проверку для того сделан ли фильтр по категории или полу.
-      }
       state.filtered = action.payload;
       state.filterDone = true;
     },
@@ -79,4 +80,5 @@ export const {
   decrementSummary,
   filterArray,
   clearFilter,
+  setHide,
 } = cartSlice.actions;

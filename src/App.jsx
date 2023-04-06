@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
-import data from "./catalog.json";
 import { MyItem } from "./Components/Cart/Cart";
-import { addToCart, incrementSummary } from "./Components/store/cartSlice";
+import { setHide } from "./Components/store/cartSlice";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -10,46 +9,24 @@ import { Filter } from "./Components/Filter/Filter";
 import { Filtered } from "./Components/Filtered/Filtered";
 import { UnFiltered } from "./Components/UnFiltered/UnFiltered";
 
-export const App = (props) => {
-  const [hide, setHide] = useState(true);
-  const [productsToShow, setProductsToShow] = useState();
-
+export const App = () => {
   const cart = useSelector((state) => state.cart);
   const summary = useSelector((state) => state.summary);
   const filtered = useSelector((state) => state.filterDone);
+  const hide = useSelector((state) => state.hide);
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (summary === 0) {
-      setHide(true);
-    } else if (filtered === true) {
-      setProductsToShow = filteredProducts;
-    } else {
-      setProductsToShow = unFiltered;
+      dispatch(setHide(true));
     }
   });
-
-  const handleBuy = (e) => {
-    console.log(e.target.id);
-    const result = data.products.find((item) => item.id == e.target.id);
-    setHide(false);
-    dispatch(
-      addToCart({
-        title: result.title,
-        id: result.id,
-        price: result.price,
-        quantity: 1,
-        image: result.imageURL,
-      })
-    );
-    dispatch(incrementSummary(result.price));
-  };
 
   const cartHandler = () => {
     if (cart.length <= 0) {
       return;
     } else {
-      setHide(!hide);
+      dispatch(setHide(!hide));
     }
   };
 

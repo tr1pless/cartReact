@@ -11,6 +11,8 @@ export const MyItem = () => {
         <div className="cart">
           {cart?.map((item) => (
             <CartItem
+              brand={item.brand}
+              inStock={item.items_left}
               image={item.image}
               key={item.id}
               id={item.id}
