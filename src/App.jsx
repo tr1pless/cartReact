@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 import { MyItem } from "./Components/Cart/Cart";
 import { setHide } from "./Components/store/cartSlice";

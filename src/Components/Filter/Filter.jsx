@@ -5,8 +5,6 @@ import { clearFilter, filterArray } from "./../store/cartSlice";
 import "./filter.css";
 
 export const Filter = () => {
-  const filter = useSelector((state) => state.filtered);
-  const filtered = useSelector((state) => state.filterDone);
   const dispatch = useDispatch();
 
   const [gender, setGender] = useState("nothing");

@@ -11,12 +11,10 @@ export const Filtered = () => {
   return filter.map((product) => {
     const handleBuy = (e) => {
       console.log(e.target.id);
-      const result = data.products.find((item) => item.id == e.target.id);
+      const result = data.products.find((item) => item.id === +e.target.id);
       dispatch(setHide(false));
       dispatch(
         addToCart({
-          brand: result.brand,
-          items_left: result.items_left,
           title: result.title,
           id: result.id,
           price: result.price,
