@@ -17,5 +17,8 @@
         "react"
     ],
     "rules": {
+        "quotes": [2, "single", { "avoidEscape": false }],
+        "comma-dangle": [2, "always-multiline"],
+        "react/prop-types": "off"
     }
 }

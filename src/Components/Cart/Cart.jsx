@@ -1,14 +1,14 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { CartItem } from "../CartItem/CartItem";
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { CartItem } from '../CartItem/CartItem'
 
 export const MyItem = () => {
-  const cart = useSelector((state) => state.cart);
+  const cart = useSelector((state) => state.cart)
 
   return (
     <>
-      <div className="cartWrapper">
-        <div className="cart">
+      <div className='cartWrapper'>
+        <div className='cart'>
           {cart?.map((item) => (
             <CartItem
               image={item.image}
@@ -22,5 +22,5 @@ export const MyItem = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
