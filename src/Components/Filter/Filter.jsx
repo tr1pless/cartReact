@@ -35,6 +35,7 @@ export const Filter = () => {
         dispatch(filterArray(result));
       }
     }
+    setGender(e.target.value);
   };
 
   const handleCategory = (e) => {
@@ -60,6 +61,7 @@ export const Filter = () => {
         dispatch(filterArray(result));
       }
     }
+    setCategory(e.target.value);
   };
 
   return (
@@ -91,36 +93,21 @@ export const Filter = () => {
           style={show ? { maxWidth: "0" } : { maxWidth: "300px" }}
         >
           <label htmlFor="gender" />
-          <select
-            name="gender"
-            onChange={(e) => {
-              setGender(e.target.value), handleGender(e);
-            }}
-          >
+          <select name="gender" onChange={(e) => handleGender(e)}>
             <option value="nothing">All</option>
             <option value="MEN">MEN</option>
             <option value="WOMEN">WOMEN</option>
             <option value="KIDS">KIDS</option>
           </select>
           <label htmlFor="category" />
-          <select
-            name="category"
-            onChange={(e) => {
-              setCategory(e.target.value), handleCategory(e);
-            }}
-          >
+          <select name="category" onChange={(e) => handleCategory(e)}>
             <option value="nothing">All</option>
             <option value="RUNNING">running</option>
             <option value="FOOTBALL">football</option>
             <option value="CASUAL">casual</option>
             <option value="FORMAL">formal</option>
           </select>
-          <button
-            className="clearBtn"
-            onClick={() => {
-              dispatch(clearFilter()), console.log(filter, filtered);
-            }}
-          >
+          <button className="clearBtn" onClick={() => dispatch(clearFilter())}>
             <svg
               style={{ width: "45px", fill: "#214287" }}
               xmlns="http://www.w3.org/2000/svg"

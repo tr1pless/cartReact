@@ -62,7 +62,7 @@ const cartSlice = createSlice({
     decrementSummary: (state, action) => {
       const item = state.cart.find((item) => item.price === action.payload);
       if (item.quantity === 1) {
-        state.summary == state.summary;
+        state.summary = state.summary;
       } else {
         state.summary -= action.payload;
       }
